@@ -46,7 +46,7 @@ int findMaxMin() {
   return m;
 }
 
-//Helper function to find if the given range is possible
+//Helper function to find if the given range is results in a valid configuration (i. e. each person is seated at a table)
 bool distanceChecker(int v) {
   //current table to place person at
   int curr = tables.front() + v;
@@ -55,7 +55,7 @@ bool distanceChecker(int v) {
   //r = remaining people to place (first person always placed at first table)
   for (int r = p - 1; r > 0; r--) {
     if (curr > tables.back()) return false;
-    //binary search to find first element greater than minimum range v
+    //binary search to find first table v units away from the last one
     start = 0;
     end = tables.size();
     while (start <= end) {
