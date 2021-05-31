@@ -9,7 +9,9 @@ using namespace std;
 
 //Input
 void input() {
+  cout << "# of tables: " << endl;
   cin >> n;
+  cout << "# of people to be seated: " << endl;
   cin >> p;
   
   int y;
@@ -72,5 +74,5 @@ bool distanceChecker(int v) {
 
 int main() {
   input();
-  cout << findMaxMin() << endl;
+  cout << "Minimum Distance: " << findMaxMin() << endl;
 }
